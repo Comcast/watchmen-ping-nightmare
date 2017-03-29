@@ -1,0 +1,8 @@
+{
+ "reporter": ["text-summary", "html"],
+ "report-dir": "./coverage",
+ "lines": 100,
+ "statements": 100,
+ "functions": 100,
+ "check-coverage": true
+}
