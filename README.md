@@ -3,8 +3,8 @@
 
 Feed a nightmare script to Watchmen to run synthetic monitoring.
 
-In Watchmen's `package.json` make sure to install [nightmareJS] [nightmare].
-* [nightmare (@:octocat:)] [nightmare]
+In Watchmen's `package.json` make sure to install [nightmareJS][nightmare].
+* [nightmare (@:octocat:)][nightmare]
 * [watchmen (@GH)](https://github.com/iloire/watchmen)
 
 ---
