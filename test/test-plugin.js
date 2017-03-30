@@ -6,7 +6,7 @@ describe('The Nightmare Ping Service', () => {
   let service;
   let pingService;
 
-  beforeEach((done) => {
+  beforeEach(done => {
     pingService = new NightmarePingService();
     service = {
       pingServiceOptions: {
@@ -52,7 +52,7 @@ describe('The Nightmare Ping Service', () => {
   });
 
   describe('with script execute failure', () => {
-    beforeEach((done) => {
+    beforeEach(done => {
       service.pingServiceOptions['nightmare'].scriptPath.value = `${mocksPath}/nightmare-fail.js`;
       done();
     });
