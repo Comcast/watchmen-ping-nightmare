@@ -6,7 +6,7 @@ describe('The Nightmare Ping Service', () => {
   let service;
   let pingService;
 
-  beforeEach((done) => {
+  beforeEach(done => {
     pingService = new NightmarePingService();
     service = {
       pingServiceOptions: {
