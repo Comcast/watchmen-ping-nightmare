@@ -6,7 +6,7 @@ describe('The Nightmare Ping Service', () => {
   let service;
   let pingService;
 
-  beforeEach(() => {
+  beforeEach(done => {
     pingService = new NightmarePingService();
     service = {
       pingServiceOptions: {
@@ -17,6 +17,7 @@ describe('The Nightmare Ping Service', () => {
         },
       },
     };
+    done();
   });
 
   it('should expose configuration options when queried', () => {
@@ -42,17 +43,18 @@ describe('The Nightmare Ping Service', () => {
   });
 
   describe('with script execute success', () => {
-    it('should exit without errors', () => {
+    it('should exit without errors', (done) => {
       pingService = new NightmarePingService();
-      pingService.ping(service, (err) => {
-        throw new Error('Test failed.');
+      pingService.ping(service, () => {
+        done();
       });
     });
   });
 
   describe('with script execute failure', () => {
-    beforeEach(() => {
+    beforeEach(done => {
       service.pingServiceOptions['nightmare'].scriptPath.value = `${mocksPath}/nightmare-fail.js`;
+      done();
     });
 
     it('should invoke the error callback to deal with unhandled errors', (done) => {
@@ -66,14 +68,14 @@ describe('The Nightmare Ping Service', () => {
       service.pingServiceOptions['nightmare'].scriptPath.value = `${mocksPath}/nightmare-fail-complex.js`;
       pingService.ping(service, (err) => {
         expect(err).toExist();
-        done();
       });
+      done();
     });
 
     it('should summarize the error returned from nightmare', (done) => {
       pingService.ping(service, (err, body, response, time) => {
         expect(time).toNotBe(0);
-        expect(err).toEqual('nightmare - Error: I am an Error');
+        expect(err).toEqual('Error: I am an Error');
         done();
       });
     });
