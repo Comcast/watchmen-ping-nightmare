@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Comcast/watchmen-ping-nightmare.svg?branch=master)](https://travis-ci.org/Comcast/watchmen-ping-nightmare)
+
 # :watch::horse: NightmareJS Plugin for Watchmen
 ## Allows Nightmare scripts to be executed by a Watchmen instance
 
