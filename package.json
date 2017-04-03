@@ -9,10 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "repository": "https://github.com/Comcast/watchmen-ping-nightmare"
+    "repository": "git://github.com/Comcast/watchmen-ping-nightmare.git"
   },
   "authors": "Max Knee, Franco Ghilardi",
   "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Comcast/watchmen-ping-nightmare/issues"
+  },
+  "homepage": "https://github.com/Comcast/watchmen-ping-nightmare",  
   "devDependencies": {
     "expect": "^1.20.2",
     "mocha": "^3.2.0",
