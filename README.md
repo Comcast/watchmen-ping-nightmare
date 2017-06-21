@@ -15,7 +15,7 @@ In your Watchmen directory:
 
 ### How To Use:
 - Create a nightmare script with a `.js` extension
-```
+```javascript
 var Nightmare = require('nightmare');
 
 Nightmare
@@ -34,7 +34,7 @@ Nightmare
   .catch(function(err) {
     console.log('error!', err);
   });
-```js
+```
 
 - Copy your `.js` file to a directory on your Watchmen instance
 - After uploaded - click add new service and select ping service `nightmare`
