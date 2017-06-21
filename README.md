@@ -9,6 +9,38 @@ In Watchmen's `package.json` make sure to install [nightmareJS][nightmare].
 * [nightmare (@:octocat:)][nightmare]
 * [watchmen (@GH)](https://github.com/iloire/watchmen)
 
+### How To Use:
+- Create a nightmare script
+```
+var Nightmare = require('nightmare');
+
+nightmare
+  .goto('https://xfinity.com')
+  .type('#main-search-field', 'puppies')
+  .click('.search-button')
+  .evaluate(function() {
+    if (window.location.host === 'my.xfinity.com') {
+      return window.location.host;
+    }
+  })
+  .end()
+  .then(function(result) {
+    console.log('success', result);
+  })
+  .catch(function(err) {
+    console.log('error!', err);
+  });
+```
+
+- Copy file to a directory on your Watchmen instance
+- After uploaded - click add new service and select ping service `nightmare`
+- In Ping options `scriptPath` put full file path and file name
+- Click `Save` and you'll be on your way!
+
+Please read `CONTRIBUTING.md` for how to contribute to the project.
+
+Any issues/comments/questions, please file an issue and we'll respond.
+
 ---
 
 Copyright 2017 Comcast Cable Communications Management, LLC
