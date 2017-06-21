@@ -30,7 +30,7 @@ nightmare
   .catch(function(err) {
     console.log('error!', err);
   });
-```
+```js
 
 - Copy file to a directory on your Watchmen instance
 - After uploaded - click add new service and select ping service `nightmare`
