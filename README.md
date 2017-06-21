@@ -3,18 +3,22 @@
 # :watch::horse: NightmareJS Plugin for Watchmen
 ## Allows Nightmare scripts to be executed by a Watchmen instance
 
+* [nightmare (@:octocat:)][nightmare]
+* [watchmen (@:octocat:)][watchmen]
+
 Feed a nightmare script to Watchmen to run synthetic monitoring.
 
-In Watchmen's `package.json` make sure to install [nightmareJS][nightmare].
-* [nightmare (@:octocat:)][nightmare]
-* [watchmen (@GH)](https://github.com/iloire/watchmen)
+In your Watchmen directory:
+`npm install nightmare --save`
+`npm install watchmen-ping-nightmare --save`
+
 
 ### How To Use:
-- Create a nightmare script
+- Create a nightmare script with a `.js` extension
 ```
 var Nightmare = require('nightmare');
 
-nightmare
+Nightmare
   .goto('https://xfinity.com')
   .type('#main-search-field', 'puppies')
   .click('.search-button')
@@ -32,9 +36,12 @@ nightmare
   });
 ```js
 
-- Copy file to a directory on your Watchmen instance
+- Copy your `.js` file to a directory on your Watchmen instance
 - After uploaded - click add new service and select ping service `nightmare`
+![add servce][add-service]
+![select ping service][select-ping-service]
 - In Ping options `scriptPath` put full file path and file name
+![script path][script-file-path]
 - Click `Save` and you'll be on your way!
 
 Please read `CONTRIBUTING.md` for how to contribute to the project.
@@ -49,3 +56,8 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 [nightmare]: https://github.com/segmentio/nightmare
+[watchmen]: https://github.com/iloire/watchmen
+
+[add-service]: docs/add-new-service.png
+[select-ping-service]: docs/select-ping-service.png
+[script-file-path]: docs/script-file-path.png
