@@ -17,8 +17,9 @@ In your Watchmen directory:
 - Create a nightmare script with a `.js` extension
 ```javascript
 var Nightmare = require('nightmare');
+var nightmare = nightmare();
 
-Nightmare
+nightmare
   .goto('https://xfinity.com')
   .type('#main-search-field', 'puppies')
   .click('.search-button')
