@@ -1,3 +1,6 @@
+# !!Deprecated!!
+## Please use [Watchmen-ping-puppeteer](https://github.com/Comcast/watchmen-ping-puppeteer)
+
 [![Build Status](https://travis-ci.org/Comcast/watchmen-ping-nightmare.svg?branch=master)](https://travis-ci.org/Comcast/watchmen-ping-nightmare)
 
 # :watch::horse: NightmareJS Plugin for Watchmen
